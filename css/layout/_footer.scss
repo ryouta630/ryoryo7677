@@ -1,0 +1,39 @@
+/* CSS Document */
+.footer {
+	background-color: rgba(225,225,225,0.3);
+	height: 220px;
+	.footer-wrap {
+		font-weight: 600;
+		nav {
+			ul {
+				display: flex;
+				justify-content: center;
+				padding-top: 35px;
+				.list-item {
+					+.list-item {
+						margin-left: 20px;
+					}
+					a {
+						color: #333;
+						font-size: 1.6rem;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+		.sns {
+			display: flex;
+			justify-content: center;
+			padding: 25px 0 40px;
+			.line {
+				
+			}
+			.twitter {
+				padding-left: 40px;
+			}
+		}
+	}
+	.copyright {
+		color: #333;
+	}
+}

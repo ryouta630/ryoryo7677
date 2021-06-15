@@ -1,0 +1,74 @@
+/* CSS Document */
+.sec-flow {
+	.inner {
+		max-width: 1200px;
+		margin: 0 auto;
+		.sec-title {
+			
+		}
+		.flow-list {
+			display: flex;
+			justify-content: space-between;
+			list-style: none;
+			.flow-item {
+				width: 250px;
+				background-color: rgba(225,225,225,0.7);
+				padding: 20px;
+				box-sizing: border-box;
+				+.flow-item {
+					margin-left: 40px;
+				}
+				.contents {
+					display: flex;
+					flex-flow: column-reverse;
+					.text {
+						.title {
+							font-size: 2.4rem;
+							padding: 20px 0 30px;
+						}
+						.desc {
+							text-align: left;
+							padding-bottom: 10px;
+						}
+					}
+					.step {
+						width: 104px;
+						margin: 0 auto;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media(max-width:1000px) {
+	.sec-flow {
+	.inner {
+		.sec-title {
+			
+		}
+		.flow-list {
+			display: block;
+			.flow-item {
+				width: auto;
+				max-width: 500px;
+				margin: 0 auto;
+				+.flow-item {
+					margin-left: 0;
+					margin: 40px auto 0
+				}
+				.contents {
+					.text {
+						.title {
+						}
+						.desc {
+						}
+					}
+					.step {
+					}
+				}
+			}
+		}
+	}
+}
+}

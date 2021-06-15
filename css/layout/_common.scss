@@ -1,0 +1,244 @@
+/* CSS Document */
+@charset "UTF-8";
+/* CSS Document */
+html {
+  font-size: 62.5%; /* 16px * 62.5% = 10px */
+  width: 100%;
+  box-sizing: border-box;
+}
+body {
+  color: #333; /* RGB */
+  font-family: 'Noto Serif JP', serif, "メイリオ", ;
+  font-weight: 500;
+  font-size: 1.6em;
+  line-height: 2.4rem;
+  text-align: center;
+	&::before {
+		content: "";
+		display: block;
+		top: 0;
+		left: 0;
+		background-image: url("../image/background.jpg");
+		background-size: cover;
+		width: 100vw;
+		height: 100vh;
+		z-index: -1;
+		position: fixed;
+	}
+}
+img {
+	width: 100%;
+}
+.header-fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgba(0,0,0,0.7);
+}
+@media(max-width:1140px) {
+	.header-fixed {
+	background: none;
+}
+}
+.line {
+	width: 100px;
+	img {
+		height: 30px;
+	}
+}
+.twitter {
+	width: 30px;
+	img {
+		
+		height: 25px;
+	}
+}
+.cmn-sec {
+	padding-bottom: 80px;
+	&::before {
+			display: block;
+			content: "";
+  		height: 15rem;
+  		margin-top: -15rem;
+		}
+	.sec-title {
+		font-size: 5rem;
+		padding-bottom: 80px;
+		&::after {
+			content: "";
+			display: block;
+			background-color: #FF2D2D;
+			height: 1px;
+			margin: 20px auto 0;
+			width: 100px;
+		}
+	}
+}
+@media(max-width:768px) {
+	.cmn-sec {
+	padding-bottom: 60px;
+	.sec-title {
+		font-size: 2.4rem;
+		padding-bottom: 60px;
+		&::after {
+			width: 50px;
+		}
+	}
+}
+}
+
+.btn {
+	
+}
+
+.none {
+  display: none;
+}
+#scroll-top {
+  bottom: 20px;
+  padding: 20px;
+  position: fixed;
+  right: 20px;
+	background-image: url("../image/top-btn1.png");
+	background-size: cover;
+	background-position: center;
+	height: 100px;
+	width: 100px;
+	box-sizing: border-box;
+	display: block;
+	&:hover {
+		background-image: url("../image/top-btn2.png");
+		background-size: cover;
+		background-position: center;
+		transition: .3s;
+		opacity: 1;
+		transform: translateY(-15px);
+	}
+	&.-active {
+		display: none;
+	}
+}
+
+.btn {
+  font-weight: 700;
+  display: block;
+  transition: all 0.3s;
+  text-decoration: none;
+  color: #212529;
+  border-radius: 0.5rem;
+	position: relative;
+	&.-active {
+		display: none;
+	}
+}
+
+.btn-flat {
+  overflow: hidden;
+  background-color: rgba(225,225,225,0.9);
+  border-radius: 10px;
+	width: 200px;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  align-items: center;
+  margin: 40px auto 0;
+		span {
+			color: #333;
+			position: relative;
+			z-index: 500;
+	}
+	&:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150%;
+  height: 500%;
+  content: "";
+  transition: all 0.5s ease-in-out;
+  transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  background: #00b7ee;
+}
+	&:hover:before {
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
+		opacity: 1;
+}
+}
+
+.sec-contact {
+	.sec-title {
+		
+	}
+	.desc {
+		font-size: 3.6rem;
+		line-height: 4.8rem;
+		font-weight: 600;
+	}
+}
+
+@media(max-width:768px) {
+	.sec-contact {
+	.sec-title {
+		
+	}
+	.desc {
+		font-size: 2.4rem;
+		line-height: 3.6rem;
+	}
+}
+}
+
+/*スクロールダウン全体の場所*/
+.scrolldown1{
+    /*描画位置※位置は適宜調整してください*/
+  position:absolute;
+  left:50%;
+  bottom:10px;
+    /*全体の高さ*/
+  height:50px;
+}
+
+/*Scrollテキストの描写*/
+.scrolldown1 span{
+    /*描画位置*/
+  position: absolute;
+  left:-15px;
+  top: -15px;
+    /*テキストの形状*/
+  color: #eee;
+  font-size: 1.2rem;
+  letter-spacing: 0.05em;
+}
+
+/* 線の描写 */
+.scrolldown1::after{
+  content: "";
+    /*描画位置*/
+  position: absolute;
+  top: 0;
+    /*線の形状*/
+  width: 1px;
+  height: 30px;
+  background: #eee;
+    /*線の動き1.4秒かけて動く。永遠にループ*/
+  animation: pathmove 1.4s ease-in-out infinite;
+  opacity:0;
+}
+
+/*高さ・位置・透過が変化して線が上から下に動く*/
+@keyframes pathmove{
+  0%{
+    height:0;
+    top:0;
+    opacity: 0;
+  }
+  30%{
+    height:30px;
+    opacity: 1;
+  }
+  100%{
+    height:0;
+    top:50px;
+    opacity: 0;
+  }
+}
