@@ -34,7 +34,8 @@ img {
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-color: rgba(0,0,0,0.7);
+	//background-color: rgba(0,0,0,0.7);
+	background-color: #333;
 }
 @media(max-width:1140px) {
 	.header-fixed {
@@ -43,12 +44,20 @@ img {
 }
 .line {
 	width: 100px;
+	&:hover {
+		opacity: .7;
+		transition: .3s;
+	}
 	img {
 		height: 30px;
 	}
 }
 .twitter {
 	width: 30px;
+	&:hover {
+		opacity: .7;
+		transition: .3s;
+	}
 	img {
 		
 		height: 25px;
@@ -119,7 +128,12 @@ img {
 		display: none;
 	}
 }
-
+@media(max-width:768px) {
+	#scroll-top {
+	height: 70px;
+	width: 70px;
+}
+}
 .btn {
   font-weight: 700;
   display: block;
