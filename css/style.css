@@ -505,7 +505,7 @@ img {
         text-decoration: none;
         max-width: 340px; }
         .sec-works .inner .work-list .work-item .work-link:hover {
-          transform: translateY(-10px);
+          box-shadow: 0 0 10px black;
           transition: .3s; }
         .sec-works .inner .work-list .work-item .work-link .contents {
           box-sizing: border-box;

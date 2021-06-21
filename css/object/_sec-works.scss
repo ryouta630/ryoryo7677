@@ -23,7 +23,7 @@
 				text-decoration: none;
 				max-width: 340px;
 				&:hover {
-					transform: translateY(-10px);
+					box-shadow: 0 0 10px black;
 					transition: .3s;
 				}
 			.contents {
