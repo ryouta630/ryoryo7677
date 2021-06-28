@@ -643,6 +643,8 @@ img {
 .footer {
   background-color: rgba(225, 225, 225, 0.3);
   height: 220px; }
+  .footer.-active {
+    opacity: 0; }
   .footer .footer-wrap {
     font-weight: 600; }
     .footer .footer-wrap nav ul {
