@@ -64,6 +64,7 @@ window.addEventListener('DOMContentLoaded',function () {
 		$('#header-wrap').removeClass('-active');
 		$('#hamburger').removeClass('-active');
 		$('.sns').removeClass('-active');
+		$('.footer').toggleClass('-active');
 	});
 });
 
