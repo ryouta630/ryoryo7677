@@ -57,14 +57,12 @@ window.addEventListener('DOMContentLoaded',function () {
 		$('.sns').toggleClass('-active');
 		$('.btn').toggleClass('-active');
 		$('#scroll-top').toggleClass('-active');
-		$('.footer').toggleClass('-active');
 	});
 	$('.item-btn').on('click',function(){
 		$('#nav-btn').removeClass('-active');
 		$('#header-wrap').removeClass('-active');
 		$('#hamburger').removeClass('-active');
 		$('.sns').removeClass('-active');
-		$('.footer').toggleClass('-active');
 	});
 });
 
